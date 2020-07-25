@@ -42,7 +42,7 @@
         android:onClick="clickFunction"
         android:text="update"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/done_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/qrCardsString" />
 
@@ -66,70 +66,42 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-<!--
-            <TextView
-                android:id="@+id/TextViewLine0"
-                android:layout_weight="0"
-                android:background="#C9E1F3"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="0"
-                android:textColor="#000000" />
--->
+            <Button
+                android:id="@+id/button00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0" />
 
-            <TextView
-                android:id="@+id/TextView00"
-                android:layout_weight="1"
-                android:background="#dcdcdc"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="0"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1" />
 
-            <TextView
-                android:id="@+id/TextView01"
-                android:layout_weight="1"
-                android:background="#d3d3d3"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="1"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2" />
 
-            <TextView
-                android:id="@+id/TextView02"
-                android:layout_weight="1"
-                android:background="#cac9c9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="2"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3" />
 
-            <TextView
-                android:id="@+id/TextView03"
-                android:layout_weight="1"
-                android:background="#cac9c9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="3"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4" />
 
-            <TextView
-                android:id="@+id/TextView04"
-                android:layout_weight="1"
-                android:background="#cac9c9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="4"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5" />
 
-            <TextView
-                android:id="@+id/TextView05"
-                android:layout_weight="1"
-                android:background="#CACAC9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="5"
-                android:textColor="#000000" />
 
         </TableRow>
 
@@ -139,149 +111,89 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-<!--
-            <TextView
-                android:id="@+id/TextViewLine1"
-                android:layout_weight="0"
-                android:background="#C9E1F3"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="1"
-                android:textColor="#000000" />
--->
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0" />
 
-            <TextView
-                android:id="@+id/TextView10"
-                android:layout_weight="1"
-                android:background="#dcdcdc"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="0"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1" />
 
-            <TextView
-                android:id="@+id/TextView11"
-                android:layout_weight="1"
-                android:background="#d3d3d3"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="1"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2" />
 
-            <TextView
-                android:id="@+id/TextVie12"
-                android:layout_weight="1"
-                android:background="#cac9c9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="2"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3" />
 
-            <TextView
-                android:id="@+id/TextView13"
-                android:layout_weight="1"
-                android:background="#cac9c9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="3"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4" />
 
-            <TextView
-                android:id="@+id/TextView14"
-                android:layout_weight="1"
-                android:background="#cac9c9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="4"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/TextView15"
-                android:layout_weight="1"
-                android:background="#CACAC9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="5"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5" />
 
 
         </TableRow>
-
 
         <!-- Row 2 with 6 columns -->
         <TableRow
             android:id="@+id/tableRow2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-<!--
 
-            <TextView
-                android:id="@+id/TextViewLine2"
-                android:layout_weight="0"
-                android:background="#C9E1F3"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="2"
-                android:textColor="#000000" />
--->
+            <Button
+                android:id="@+id/button20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0" />
 
-            <TextView
-                android:id="@+id/TextView20"
-                android:layout_weight="1"
-                android:background="#dcdcdc"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="0"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1" />
 
-            <TextView
-                android:id="@+id/TextView21"
-                android:layout_weight="1"
-                android:background="#d3d3d3"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="1"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2" />
 
-            <TextView
-                android:id="@+id/TextVie22"
-                android:layout_weight="1"
-                android:background="#cac9c9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="2"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3" />
 
-            <TextView
-                android:id="@+id/TextView23"
-                android:layout_weight="1"
-                android:background="#cac9c9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="3"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4" />
 
-            <TextView
-                android:id="@+id/TextView24"
-                android:layout_weight="1"
-                android:background="#cac9c9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="4"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/TextView25"
-                android:layout_weight="1"
-                android:background="#CACAC9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="5"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5" />
 
 
         </TableRow>
-
 
         <!-- Row 3 with 6 columns -->
         <TableRow
@@ -289,148 +201,89 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <!--<TextView
-                android:id="@+id/TextViewLine3"
-                android:layout_weight="0"
-                android:background="#C9E1F3"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="3"
-                android:textColor="#000000" />-->
+            <Button
+                android:id="@+id/button30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0" />
 
+            <Button
+                android:id="@+id/button31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1" />
 
-            <TextView
-                android:id="@+id/TextView30"
-                android:layout_weight="1"
-                android:background="#dcdcdc"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="0"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2" />
 
-            <TextView
-                android:id="@+id/TextView31"
-                android:layout_weight="1"
-                android:background="#d3d3d3"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="1"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3" />
 
-            <TextView
-                android:id="@+id/TextVie32"
-                android:layout_weight="1"
-                android:background="#cac9c9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="2"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4" />
 
-            <TextView
-                android:id="@+id/TextView33"
-                android:layout_weight="1"
-                android:background="#cac9c9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="3"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/TextView34"
-                android:layout_weight="1"
-                android:background="#cac9c9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="4"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/TextView35"
-                android:layout_weight="1"
-                android:background="#CACAC9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="5"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5" />
 
 
         </TableRow>
-
 
         <!-- Row 4 with 6 columns -->
         <TableRow
             android:id="@+id/tableRow4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-<!--
 
-            <TextView
-                android:id="@+id/TextViewLine4"
-                android:layout_weight="0"
-                android:background="#C9E1F3"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="4"
-                android:textColor="#000000" />
--->
+            <Button
+                android:id="@+id/button40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0" />
 
-            <TextView
-                android:id="@+id/TextView40"
-                android:layout_weight="1"
-                android:background="#dcdcdc"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="0"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1" />
 
-            <TextView
-                android:id="@+id/TextView41"
-                android:layout_weight="1"
-                android:background="#d3d3d3"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="1"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2" />
 
-            <TextView
-                android:id="@+id/TextVie42"
-                android:layout_weight="1"
-                android:background="#cac9c9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="2"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3" />
 
-            <TextView
-                android:id="@+id/TextView43"
-                android:layout_weight="1"
-                android:background="#cac9c9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="3"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4" />
 
-            <TextView
-                android:id="@+id/TextView44"
-                android:layout_weight="1"
-                android:background="#cac9c9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="4"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/TextView45"
-                android:layout_weight="1"
-                android:background="#CACAC9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="5"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5" />
 
 
         </TableRow>
-
 
         <!-- Row 5 with 6 columns -->
         <TableRow
@@ -438,70 +291,41 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-<!--
-            <TextView
-                android:id="@+id/TextViewLine5"
-                android:layout_weight="0"
-                android:background="#C9E1F3"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="5"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0" />
 
--->
-            <TextView
-                android:id="@+id/TextView50"
-                android:layout_weight="1"
-                android:background="#dcdcdc"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="0"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button51"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1" />
 
-            <TextView
-                android:id="@+id/TextView51"
-                android:layout_weight="1"
-                android:background="#d3d3d3"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="1"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button52"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2" />
 
-            <TextView
-                android:id="@+id/TextVie52"
-                android:layout_weight="1"
-                android:background="#cac9c9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="2"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button53"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3" />
 
-            <TextView
-                android:id="@+id/TextView53"
-                android:layout_weight="1"
-                android:background="#cac9c9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="3"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button54"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4" />
 
-            <TextView
-                android:id="@+id/TextView54"
-                android:layout_weight="1"
-                android:background="#cac9c9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="4"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/TextView55"
-                android:layout_weight="1"
-                android:background="#CACAC9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="5"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button55"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5" />
 
 
         </TableRow>
@@ -511,75 +335,45 @@
             android:id="@+id/tableRow6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-<!--
 
-            <TextView
-                android:id="@+id/TextViewLine6"
-                android:layout_weight="0"
-                android:background="#C9E1F3"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="6"
-                android:textColor="#000000" />
--->
+            <Button
+                android:id="@+id/button60"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0" />
 
-            <TextView
-                android:id="@+id/TextView60"
-                android:layout_weight="1"
-                android:background="#dcdcdc"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="0"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button61"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1" />
 
-            <TextView
-                android:id="@+id/TextView61"
-                android:layout_weight="1"
-                android:background="#d3d3d3"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="1"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button62"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2" />
 
-            <TextView
-                android:id="@+id/TextVie62"
-                android:layout_weight="1"
-                android:background="#cac9c9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="2"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button63"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3" />
 
-            <TextView
-                android:id="@+id/TextView63"
-                android:layout_weight="1"
-                android:background="#cac9c9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="3"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button64"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4" />
 
-            <TextView
-                android:id="@+id/TextView64"
-                android:layout_weight="1"
-                android:background="#cac9c9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="4"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/TextView65"
-                android:layout_weight="1"
-                android:background="#CACAC9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="5"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button65"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5" />
 
 
         </TableRow>
-
 
         <!-- Row 7 with 6 columns -->
         <TableRow
@@ -587,127 +381,51 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <!--<TextView
-                android:id="@+id/TextViewLine7"
-                android:layout_weight="0"
-                android:background="#C9E1F3"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="7"
-                android:textColor="#000000" />-->
-
-
-            <TextView
-                android:id="@+id/TextView70"
-                android:layout_weight="1"
-                android:background="#dcdcdc"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="0"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/TextView71"
-                android:layout_weight="1"
-                android:background="#d3d3d3"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="1"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/TextVie72"
-                android:layout_weight="1"
-                android:background="#cac9c9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="2"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/TextView73"
-                android:layout_weight="1"
-                android:background="#cac9c9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="3"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/TextView74"
-                android:layout_weight="1"
-                android:background="#cac9c9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="4"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/TextView75"
-                android:layout_weight="1"
-                android:background="#CACAC9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="5"
-                android:textColor="#000000" />
-
-
-        </TableRow>
-
-
-
-        <!-- Row 8 with 6 columns -->
-        <TableRow
-            android:id="@+id/tableRow8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-
             <Button
-                android:id="@+id/button80"
+                android:id="@+id/button70"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0" />
 
             <Button
-                android:id="@+id/button81"
+                android:id="@+id/button71"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1" />
 
             <Button
-                android:id="@+id/button82"
+                android:id="@+id/button72"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2" />
 
             <Button
-                android:id="@+id/button83"
-                android:layout_width="match_parent"
+                android:id="@+id/button73"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#0EDC25"
                 android:text="3" />
 
-
             <Button
-                android:id="@+id/button84"
-                android:layout_width="match_parent"
+                android:id="@+id/button74"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#FF1010"
                 android:text="4" />
 
             <Button
-                android:id="@+id/button85"
-                android:layout_width="match_parent"
+                android:id="@+id/button75"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="5" />
+
+
         </TableRow>
+
 
 
     </TableLayout>
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/done_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
