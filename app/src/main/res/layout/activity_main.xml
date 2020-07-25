@@ -2,15 +2,14 @@
 
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
     <!-- Here you put the rest of your current view-->
 
 
 <androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     style="@style/TextAppearance.AppCompat.Body2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -35,14 +34,15 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="154dp"
-        android:layout_height="47dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="70dp"
         android:layout_marginBottom="10dp"
         android:onClick="clickFunction"
-        android:text="Button"
+        android:text="update"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintEnd_toStartOf="@+id/button4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/qrCardsString" />
 
@@ -66,6 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+<!--
             <TextView
                 android:id="@+id/TextViewLine0"
                 android:layout_weight="0"
@@ -74,6 +75,7 @@
                 android:padding="20dip"
                 android:text="0"
                 android:textColor="#000000" />
+-->
 
             <TextView
                 android:id="@+id/TextView00"
@@ -137,6 +139,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+<!--
             <TextView
                 android:id="@+id/TextViewLine1"
                 android:layout_weight="0"
@@ -145,6 +148,7 @@
                 android:padding="20dip"
                 android:text="1"
                 android:textColor="#000000" />
+-->
 
             <TextView
                 android:id="@+id/TextView10"
@@ -209,6 +213,7 @@
             android:id="@+id/tableRow2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+<!--
 
             <TextView
                 android:id="@+id/TextViewLine2"
@@ -218,6 +223,7 @@
                 android:padding="20dip"
                 android:text="2"
                 android:textColor="#000000" />
+-->
 
             <TextView
                 android:id="@+id/TextView20"
@@ -283,14 +289,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
+            <!--<TextView
                 android:id="@+id/TextViewLine3"
                 android:layout_weight="0"
                 android:background="#C9E1F3"
                 android:gravity="center"
                 android:padding="20dip"
                 android:text="3"
-                android:textColor="#000000" />
+                android:textColor="#000000" />-->
 
 
             <TextView
@@ -356,6 +362,7 @@
             android:id="@+id/tableRow4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+<!--
 
             <TextView
                 android:id="@+id/TextViewLine4"
@@ -365,6 +372,7 @@
                 android:padding="20dip"
                 android:text="4"
                 android:textColor="#000000" />
+-->
 
             <TextView
                 android:id="@+id/TextView40"
@@ -430,6 +438,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+<!--
             <TextView
                 android:id="@+id/TextViewLine5"
                 android:layout_weight="0"
@@ -439,6 +448,7 @@
                 android:text="5"
                 android:textColor="#000000" />
 
+-->
             <TextView
                 android:id="@+id/TextView50"
                 android:layout_weight="1"
@@ -501,6 +511,7 @@
             android:id="@+id/tableRow6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+<!--
 
             <TextView
                 android:id="@+id/TextViewLine6"
@@ -510,6 +521,7 @@
                 android:padding="20dip"
                 android:text="6"
                 android:textColor="#000000" />
+-->
 
             <TextView
                 android:id="@+id/TextView60"
@@ -575,14 +587,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
+            <!--<TextView
                 android:id="@+id/TextViewLine7"
                 android:layout_weight="0"
                 android:background="#C9E1F3"
                 android:gravity="center"
                 android:padding="20dip"
                 android:text="7"
-                android:textColor="#000000" />
+                android:textColor="#000000" />-->
 
 
             <TextView
@@ -642,81 +654,69 @@
 
         </TableRow>
 
+
+
         <!-- Row 8 with 6 columns -->
         <TableRow
             android:id="@+id/tableRow8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/TextViewLine8"
-                android:layout_weight="0"
-                android:background="#C9E1F3"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="8"
-                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/button80"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/button81"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/button82"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/button83"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#0EDC25"
+                android:text="3" />
 
 
-            <TextView
-                android:id="@+id/TextView80"
-                android:layout_weight="1"
-                android:background="#dcdcdc"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="0"
-                android:textColor="#000000" />
+            <Button
+                android:id="@+id/button84"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FF1010"
+                android:text="4" />
 
-            <TextView
-                android:id="@+id/TextView81"
-                android:layout_weight="1"
-                android:background="#d3d3d3"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="1"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/TextVie82"
-                android:layout_weight="1"
-                android:background="#cac9c9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="2"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/TextView83"
-                android:layout_weight="1"
-                android:background="#cac9c9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="3"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/TextView84"
-                android:layout_weight="1"
-                android:background="#cac9c9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="4"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/TextView85"
-                android:layout_weight="1"
-                android:background="#CACAC9"
-                android:gravity="center"
-                android:padding="20dip"
-                android:text="5"
-                android:textColor="#000000" />
-
-
+            <Button
+                android:id="@+id/button85"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5" />
         </TableRow>
 
 
     </TableLayout>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="25dp"
+        android:text="Done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.37"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/qrCardsString" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

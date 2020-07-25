@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.myapplication.Compiler.DataToEnumsConverter;
@@ -43,11 +44,18 @@ public class MainActivity extends AppCompatActivity {
 
 //        arr.set(6,QREnums.CMD_STOP);
 //        Log.i("arr[7] contains: ",arr.get(6).toString());
+
+        //EditText qr_cards_string_var = findViewById(R.id.qrCardsString);
+
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
+
     }
 }
