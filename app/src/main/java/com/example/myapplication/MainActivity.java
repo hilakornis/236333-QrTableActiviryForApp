@@ -34,38 +34,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private ArrayList<QREnums> enums_in_table ;
 
-    private int red = Color.RED;
+    private String[] listCards;
+
 
     public ArrayList<QREnums> getQrEnumsFromString(String input){
         DataToEnumsConverter StreamToEnums = new DataToEnumsConverter();
         ArrayList<QREnums> arr = StreamToEnums.getQrEnumsFromStrAsArray(input);
         return arr;
     }
-
-//    public void updateButtonClickedFunction(View view){
-////        EditText qr_cards_string_var = findViewById(R.id.qrCardsString);
-//        Log.i("Info","Button Pressed!");
-////        Log.i("EditText contains: ",qr_cards_string_var.getText().toString());
-//
-////        qr_cards_string_var.setText(step1_result_code);
-////        Log.i("EditText contains: ",qr_cards_string_var.getText().toString());
-//
-////        ArrayList<QREnums> arr_from_string = getQrEnumsFromString(qr_cards_string_var.getText().toString());
-////        Log.i("arr[7] contains: ",arr.get(6).toString());
-//
-////        arr.set(6,QREnums.CMD_STOP);
-////        Log.i("arr[7] contains: ",arr.get(6).toString());
-//
-//        //EditText qr_cards_string_var = findViewById(R.id.qrCardsString);
-//
-//        //update text in button
-//
-//        this.table_buttons[0][0].setText("00");
-////        this.table_buttons[0][0].setBackgroundColor(red);
-//
-////        this.table_buttons[0][0].setBackgroundColor();
-//
-//    }
 
     protected void setListenersForTableButtons(){
         // --- Row 0
@@ -456,7 +432,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    protected ArrayList<QREnums> getAllButtonsOfTable(){
+    protected ArrayList<QREnums> updateEnumAccordingToTable(){
+        QREnums qrEnums;
+        String qr_str;
+        for (int i = 0 ; i < 8; i++){
+            for(int j = 0; j < 6 ; j++){
+                qr_str = this.table_buttons[i][j].getText().toString();
+                qrEnums = stringToEnum(qr_str);
+                this.enums_in_table.set(i*6+j, qrEnums);
+            }
+        }
         return enums_in_table;
     }
 
@@ -485,15 +470,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.done_button:
                 Toast.makeText(this, "Button done clicked", Toast.LENGTH_SHORT).show();
-                //todo: Alon : here I think you connect what you need to do. -Hila
-                break;
-            default:
-                Toast.makeText(this, "Button table was clicked", Toast.LENGTH_SHORT).show();
-
+                updateEnumAccordingToTable();
+                //todo: Alon : here I think you to take 'this.enums_in_table'
+                //  -Hila
                 break;
             // --- Row 0
             case R.id.button00:
-
                 break;
             case R.id.button01:
                 break;
@@ -603,10 +585,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.button75:
                 break;
-
-//            case R.id.button1:
-//                Toast.makeText(this, "Button 1 clicked", Toast.LENGTH_SHORT).show();
-//                break;
+            default:
+                Toast.makeText(this, "a Button was clicked", Toast.LENGTH_SHORT).show();
+                break;
         }
     }
 
