@@ -1,8 +1,10 @@
 package com.example.myapplication;
 
 import androidx.annotation.ColorInt;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -34,8 +36,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private ArrayList<QREnums> enums_in_table ;
 
-    private String[] listCards;
-
+    private String[] listCards = new String[]{   "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
+        "CND", "JMP_F1", "JMP_T1", "JMP_F2", "JMP_T2", "JMP_F3", "JMP_T3",
+        "T_L", "T_R", "T_U", "G_FW", "G_BK", "F_U", "F_D", "STP",
+        "CL_R", "CL_BL", "CL_G", "CL_Y", "CL_W", "CL_BK", "TILE", "BOX",
+         "FN"};
 
     public ArrayList<QREnums> getQrEnumsFromString(String input){
         DataToEnumsConverter StreamToEnums = new DataToEnumsConverter();
@@ -463,127 +468,155 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.enums_in_table = getQrEnumsFromString(step1_result_code);
         setAllButtonsOfTable(this.enums_in_table);
 
+
+
+
+    }
+
+    protected void showDialog(final int line, final int col){
+        AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
+        mBuilder.setTitle("Choose The Correct Card");
+        mBuilder.setSingleChoiceItems(listCards, -1, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                table_buttons[line][col].setText(listCards[which]);
+                dialog.dismiss();
+            }
+        });
+        mBuilder.setNeutralButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        //show Alert dialog
+        AlertDialog mDialog = mBuilder.create();
+        mDialog.show();
+
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.done_button:
-                Toast.makeText(this, "Button done clicked", Toast.LENGTH_SHORT).show();
+                Log.i("Info","Updating the ArrayList<QREnums> enums_in_table according the table,\n" +
+                        " this is the Table:");
                 updateEnumAccordingToTable();
+                Log.i("Info",this.enums_in_table.toString());
                 //todo: Alon : here I think you to take 'this.enums_in_table'
                 //  -Hila
                 break;
+
             // --- Row 0
-            case R.id.button00:
+            case R.id.button00: showDialog(0,0);
                 break;
-            case R.id.button01:
+            case R.id.button01: showDialog(0,1);
                 break;
-            case R.id.button02:
+            case R.id.button02: showDialog(0,2);
                 break;
-            case R.id.button03:
+            case R.id.button03: showDialog(0,3);
                 break;
-            case R.id.button04:
+            case R.id.button04: showDialog(0,4);
                 break;
-            case R.id.button05:
+            case R.id.button05: showDialog(0,5);
                 break;
 
             // --- Row 1
-            case R.id.button10:
+            case R.id.button10: showDialog(1,0);
                 break;
-            case R.id.button11:
+            case R.id.button11:showDialog(1,1);
                 break;
-            case R.id.button12:
+            case R.id.button12:showDialog(1,2);
                 break;
-            case R.id.button13:
+            case R.id.button13:showDialog(1,3);
                 break;
-            case R.id.button14:
+            case R.id.button14:showDialog(1,4);
                 break;
-            case R.id.button15:
+            case R.id.button15:showDialog(1,5);
                 break;
 
             // --- Row 2
-            case R.id.button20:
+            case R.id.button20: showDialog(2,0);
                 break;
-            case R.id.button21:
+            case R.id.button21: showDialog(2,1);
                 break;
-            case R.id.button22:
+            case R.id.button22: showDialog(2,2);
                 break;
-            case R.id.button23:
+            case R.id.button23: showDialog(2,3);
                 break;
-            case R.id.button24:
+            case R.id.button24: showDialog(2,4);
                 break;
-            case R.id.button25:
+            case R.id.button25: showDialog(2,5);
                 break;
 
             // --- Row 3
-            case R.id.button30:
+            case R.id.button30: showDialog(3,0);
                 break;
-            case R.id.button31:
+            case R.id.button31: showDialog(3,1);
                 break;
-            case R.id.button32:
+            case R.id.button32: showDialog(3,2);
                 break;
-            case R.id.button33:
+            case R.id.button33: showDialog(3,3);
                 break;
-            case R.id.button34:
+            case R.id.button34: showDialog(3,4);
                 break;
-            case R.id.button35:
+            case R.id.button35: showDialog(3,5);
                 break;
 
             // --- Row 4
-            case R.id.button40:
+            case R.id.button40: showDialog(4,0);
                 break;
-            case R.id.button41:
+            case R.id.button41: showDialog(4,1);
                 break;
-            case R.id.button42:
+            case R.id.button42: showDialog(4,2);
                 break;
-            case R.id.button43:
+            case R.id.button43: showDialog(4,3);
                 break;
-            case R.id.button44:
+            case R.id.button44: showDialog(4,4);
                 break;
-            case R.id.button45:
+            case R.id.button45: showDialog(4,5);
                 break;
 
             // --- Row 5
-            case R.id.button50:
+            case R.id.button50: showDialog(5,0);
                 break;
-            case R.id.button51:
+            case R.id.button51: showDialog(5,1);
                 break;
-            case R.id.button52:
+            case R.id.button52: showDialog(5,2);
                 break;
-            case R.id.button53:
+            case R.id.button53: showDialog(5,3);
                 break;
-            case R.id.button54:
+            case R.id.button54: showDialog(5,4);
                 break;
-            case R.id.button55:
+            case R.id.button55: showDialog(5,5);
                 break;
 
             // --- Row 6
-            case R.id.button60:
+            case R.id.button60: showDialog(6,0);
                 break;
-            case R.id.button61:
+            case R.id.button61: showDialog(6,1);
                 break;
-            case R.id.button62:
+            case R.id.button62: showDialog(6,2);
                 break;
-            case R.id.button63:
+            case R.id.button63: showDialog(6,3);
                 break;
-            case R.id.button64:
+            case R.id.button64: showDialog(6,4);
                 break;
-            case R.id.button65:
+            case R.id.button65: showDialog(6,5);
                 break;
 
             // --- Row 7
-            case R.id.button70:
+            case R.id.button70: showDialog(7,0);
                 break;
-            case R.id.button71:
+            case R.id.button71: showDialog(7,1);
                 break;
-            case R.id.button72:
+            case R.id.button72: showDialog(7,2);
                 break;
-            case R.id.button73:
+            case R.id.button73: showDialog(7,3);
                 break;
-            case R.id.button74:
+            case R.id.button74: showDialog(7,4);
                 break;
-            case R.id.button75:
+            case R.id.button75: showDialog(7,5);
                 break;
             default:
                 Toast.makeText(this, "a Button was clicked", Toast.LENGTH_SHORT).show();
