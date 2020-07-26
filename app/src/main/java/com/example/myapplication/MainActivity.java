@@ -525,15 +525,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             // --- Row 1
             case R.id.button10: showDialog(1,0);
                 break;
-            case R.id.button11:showDialog(1,1);
+            case R.id.button11: showDialog(1,1);
                 break;
-            case R.id.button12:showDialog(1,2);
+            case R.id.button12: showDialog(1,2);
                 break;
-            case R.id.button13:showDialog(1,3);
+            case R.id.button13: showDialog(1,3);
                 break;
-            case R.id.button14:showDialog(1,4);
+            case R.id.button14: showDialog(1,4);
                 break;
-            case R.id.button15:showDialog(1,5);
+            case R.id.button15: showDialog(1,5);
                 break;
 
             // --- Row 2
