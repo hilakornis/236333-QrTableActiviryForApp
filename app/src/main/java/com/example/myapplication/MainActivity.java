@@ -479,6 +479,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBuilder.setSingleChoiceItems(listCards, -1, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+                //Here we set the button appearance according to the choice.
                 table_buttons[line][col].setText(listCards[which]);
                 dialog.dismiss();
             }
