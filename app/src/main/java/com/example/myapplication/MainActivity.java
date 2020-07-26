@@ -1,7 +1,9 @@
 package com.example.myapplication;
 
+import androidx.annotation.ColorInt;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -27,8 +29,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             "NaN,NaN,NaN,NaN,NaN,NaN";
 
     private Button[][]  table_buttons;
-    private Button update_button;
+//    private Button update_button;
     private Button done_button;
+
+    private ArrayList<QREnums> enums_in_table ;
+
+    private int red = Color.RED;
 
     public ArrayList<QREnums> getQrEnumsFromString(String input){
         DataToEnumsConverter StreamToEnums = new DataToEnumsConverter();
@@ -36,28 +42,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return arr;
     }
 
-    public void updateButtonClickedFunction(View view){
-        EditText qr_cards_string_var = findViewById(R.id.qrCardsString);
-        Log.i("Info","Button Pressed!");
-        Log.i("EditText contains: ",qr_cards_string_var.getText().toString());
-
-        qr_cards_string_var.setText(step1_result_code);
-        Log.i("EditText contains: ",qr_cards_string_var.getText().toString());
-
-        ArrayList<QREnums> arr_from_string = getQrEnumsFromString(qr_cards_string_var.getText().toString());
-//        Log.i("arr[7] contains: ",arr.get(6).toString());
-
-//        arr.set(6,QREnums.CMD_STOP);
-//        Log.i("arr[7] contains: ",arr.get(6).toString());
-
-        //EditText qr_cards_string_var = findViewById(R.id.qrCardsString);
-
-        //update text in button
-
-        this.table_buttons[0][0].setText("00");
-
-
-    }
+//    public void updateButtonClickedFunction(View view){
+////        EditText qr_cards_string_var = findViewById(R.id.qrCardsString);
+//        Log.i("Info","Button Pressed!");
+////        Log.i("EditText contains: ",qr_cards_string_var.getText().toString());
+//
+////        qr_cards_string_var.setText(step1_result_code);
+////        Log.i("EditText contains: ",qr_cards_string_var.getText().toString());
+//
+////        ArrayList<QREnums> arr_from_string = getQrEnumsFromString(qr_cards_string_var.getText().toString());
+////        Log.i("arr[7] contains: ",arr.get(6).toString());
+//
+////        arr.set(6,QREnums.CMD_STOP);
+////        Log.i("arr[7] contains: ",arr.get(6).toString());
+//
+//        //EditText qr_cards_string_var = findViewById(R.id.qrCardsString);
+//
+//        //update text in button
+//
+//        this.table_buttons[0][0].setText("00");
+////        this.table_buttons[0][0].setBackgroundColor(red);
+//
+////        this.table_buttons[0][0].setBackgroundColor();
+//
+//    }
 
     protected void setListenersForTableButtons(){
         // --- Row 0
@@ -196,51 +204,408 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    protected String enumToString (QREnums enum_val ){
+
+        String ret = "";
+
+        switch (enum_val) {
+
+            case VAR_0:
+                ret = "0";
+                break;
+            case VAR_1:
+                ret = "1";
+                break;
+            case VAR_2:
+                ret = "2";
+                break;
+            case VAR_3:
+                ret = "3";
+                break;
+            case VAR_4:
+                ret = "4";
+                break;
+            case VAR_5:
+                ret = "5";
+                break;
+            case VAR_6:
+                ret = "6";
+                break;
+            case VAR_7:
+                ret = "7";
+                break;
+            case VAR_8:
+                ret = "8";
+                break;
+            case VAR_9:
+                ret = "9";
+                break;
+            //-----------
+            case CONDITION:
+                ret = "CND";
+                break;
+            //-----------
+            case JMP_FROM_1:
+                ret = "JMP_F1";
+                break;
+            case JMP_TO_1:
+                ret = "JMP_T1";
+                break;
+            case JMP_FROM_2:
+                ret = "JMP_F2";
+                break;
+            case JMP_TO_2:
+                ret = "JMP_T2";
+                break;
+            case JMP_FROM_3:
+                ret = "JMP_F3";
+                break;
+            case JMP_TO_3:
+                ret = "JMP_T3";
+                break;
+            //-----------
+            case CMD_TURN_LEFT :
+                ret = "T_L";
+                break;
+            case CMD_TURN_RIGHT:
+                ret = "T_R";
+                break;
+            case CMD_TURN_AROUND:
+                ret = "T_U";
+                break;
+            case CMD_GO_FORWARD:
+                ret = "G_FW";
+                break;
+            case CMD_GO_BACKWARD:
+                ret = "G_BK";
+                break;
+            case CMD_FORKLIFT_UP:
+                ret = "F_U";
+                break;
+            case CMD_FORKLIFT_DOWN:
+                ret = "F_D";
+                break;
+            case CMD_STOP:
+                ret = "STP";
+                break;
+            //-----------
+            case VAR_COLOR_RED:
+                ret = "CL_R";
+                break;
+            case VAR_COLOR_BLUE:
+                ret = "CL_BL";
+                break;
+            case VAR_COLOR_GREEN:
+                ret = "CL_G";
+                break;
+            case VAR_COLOR_YELLOW:
+                ret = "CL_Y";
+                break;
+            case VAR_COLOR_WHITE:
+                ret = "CL_W";
+                break;
+            case VAR_COLOR_BLACK:
+                ret = "CL_BK";
+                break;
+            //-----------
+            case TILE:
+                ret = "TILE";
+                break;
+            case BOX:
+                ret = "BOX";
+                break;
+            case FENCE:
+                ret = "FN";
+                break;
+            default: //this is for "NaN" string
+                ret = "NaN";
+        }
+
+        return ret;
+    }
+
+    protected QREnums stringToEnum (String val_str ){
+
+        QREnums qrEnum;
+
+        switch (val_str) {
+            case "0":
+                qrEnum = QREnums.VAR_0;
+                break;
+            case "1":
+                qrEnum = QREnums.VAR_1;
+                break;
+            case "2":
+                qrEnum = QREnums.VAR_2;
+                break;
+            case "3":
+                qrEnum = QREnums.VAR_3;
+                break;
+            case "4":
+                qrEnum = QREnums.VAR_4;
+                break;
+            case "5":
+                qrEnum = QREnums.VAR_5;
+                break;
+            case "6":
+                qrEnum = QREnums.VAR_6;
+                break;
+            case "7":
+                qrEnum = QREnums.VAR_7;
+                break;
+            case "8":
+                qrEnum = QREnums.VAR_8;
+                break;
+            case "9":
+                qrEnum = QREnums.VAR_9;
+                break;
+            //-----------
+            case "CND":
+                qrEnum = QREnums.CONDITION;
+                break;
+            //-----------
+            case "JMP_F1":
+                qrEnum = QREnums.JMP_FROM_1;
+                break;
+            case "JMP_T1":
+                qrEnum = QREnums.JMP_TO_1;
+                break;
+            case "JMP_F2":
+                qrEnum = QREnums.JMP_FROM_2;
+                break;
+            case "JMP_T2":
+                qrEnum = QREnums.JMP_TO_2;
+                break;
+            case "JMP_F3":
+                qrEnum = QREnums.JMP_FROM_3;
+                break;
+            case "JMP_T3":
+                qrEnum = QREnums.JMP_TO_3;
+                break;
+            //-----------
+            case "T_L":
+                qrEnum = QREnums.CMD_TURN_LEFT;
+                break;
+            case "T_R":
+                qrEnum = QREnums.CMD_TURN_RIGHT;
+                break;
+            case "T_U":
+                qrEnum = QREnums.CMD_TURN_AROUND;
+                break;
+            case "G_FW":
+                qrEnum = QREnums.CMD_GO_FORWARD;
+                break;
+            case "G_BK":
+                qrEnum = QREnums.CMD_GO_BACKWARD;
+                break;
+            case "F_U":
+                qrEnum = QREnums.CMD_FORKLIFT_UP;
+                break;
+            case "F_D":
+                qrEnum = QREnums.CMD_FORKLIFT_DOWN;
+                break;
+            case "STP":
+                qrEnum = QREnums.CMD_STOP;
+                break;
+            //-----------
+            case "CL_R":
+                qrEnum = QREnums.VAR_COLOR_RED;
+                break;
+            case "CL_BL":
+                qrEnum = QREnums.VAR_COLOR_BLUE;
+                break;
+            case "CL_G":
+                qrEnum = QREnums.VAR_COLOR_GREEN;
+                break;
+            case "CL_Y":
+                qrEnum = QREnums.VAR_COLOR_YELLOW;
+                break;
+            case "CL_W":
+                qrEnum = QREnums.VAR_COLOR_WHITE;
+                break;
+            case "CL_BK":
+                qrEnum = QREnums.VAR_COLOR_BLACK;
+                break;
+            //-----------
+            case "TILE":
+                qrEnum = QREnums.TILE;
+                break;
+            case "BOX":
+                qrEnum = QREnums.BOX;
+                break;
+            case "FN":
+                qrEnum = QREnums.FENCE;
+                break;
+            default: //this is for "NaN" string
+                qrEnum = QREnums.NaN;
+        }
+
+        return qrEnum;
+    }
+
+    protected void setAllButtonsOfTable(ArrayList<QREnums> vals){
+        QREnums qrEnums;
+        String qr_str;
+        for (int i = 0 ; i < 8; i++){
+            for(int j = 0; j < 6 ; j++){
+                qrEnums = vals.get(i*6+j);
+                qr_str = enumToString(qrEnums);
+                this.table_buttons[i][j].setText(qr_str);
+            }
+        }
+
+    }
+
+    protected ArrayList<QREnums> getAllButtonsOfTable(){
+        return enums_in_table;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.update_button = findViewById(R.id.update_button);
+//        this.update_button = findViewById(R.id.update_button);
         this.done_button = findViewById(R.id.done_button);
         this.table_buttons = new Button[8][6];
         setIdForTableButtons();
 
-        this.update_button.setOnClickListener(this);
+//        this.update_button.setOnClickListener(this);
         this.done_button.setOnClickListener(this);
         setListenersForTableButtons();
+
+        Log.i("Info","Setting the buttons according to step1_result_code variable");
+        this.enums_in_table = getQrEnumsFromString(step1_result_code);
+        setAllButtonsOfTable(this.enums_in_table);
 
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-
-            case R.id.update_button:
-                Toast.makeText(this, "Button update clicked", Toast.LENGTH_SHORT).show();
-                updateButtonClickedFunction(v);
-                break;
             case R.id.done_button:
                 Toast.makeText(this, "Button done clicked", Toast.LENGTH_SHORT).show();
+                //todo: Alon : here I think you connect what you need to do. -Hila
                 break;
             default:
                 Toast.makeText(this, "Button table was clicked", Toast.LENGTH_SHORT).show();
+
                 break;
+            // --- Row 0
+            case R.id.button00:
+
+                break;
+            case R.id.button01:
+                break;
+            case R.id.button02:
+                break;
+            case R.id.button03:
+                break;
+            case R.id.button04:
+                break;
+            case R.id.button05:
+                break;
+
+            // --- Row 1
+            case R.id.button10:
+                break;
+            case R.id.button11:
+                break;
+            case R.id.button12:
+                break;
+            case R.id.button13:
+                break;
+            case R.id.button14:
+                break;
+            case R.id.button15:
+                break;
+
+            // --- Row 2
+            case R.id.button20:
+                break;
+            case R.id.button21:
+                break;
+            case R.id.button22:
+                break;
+            case R.id.button23:
+                break;
+            case R.id.button24:
+                break;
+            case R.id.button25:
+                break;
+
+            // --- Row 3
+            case R.id.button30:
+                break;
+            case R.id.button31:
+                break;
+            case R.id.button32:
+                break;
+            case R.id.button33:
+                break;
+            case R.id.button34:
+                break;
+            case R.id.button35:
+                break;
+
+            // --- Row 4
+            case R.id.button40:
+                break;
+            case R.id.button41:
+                break;
+            case R.id.button42:
+                break;
+            case R.id.button43:
+                break;
+            case R.id.button44:
+                break;
+            case R.id.button45:
+                break;
+
+            // --- Row 5
+            case R.id.button50:
+                break;
+            case R.id.button51:
+                break;
+            case R.id.button52:
+                break;
+            case R.id.button53:
+                break;
+            case R.id.button54:
+                break;
+            case R.id.button55:
+                break;
+
+            // --- Row 6
+            case R.id.button60:
+                break;
+            case R.id.button61:
+                break;
+            case R.id.button62:
+                break;
+            case R.id.button63:
+                break;
+            case R.id.button64:
+                break;
+            case R.id.button65:
+                break;
+
+            // --- Row 7
+            case R.id.button70:
+                break;
+            case R.id.button71:
+                break;
+            case R.id.button72:
+                break;
+            case R.id.button73:
+                break;
+            case R.id.button74:
+                break;
+            case R.id.button75:
+                break;
+
 //            case R.id.button1:
 //                Toast.makeText(this, "Button 1 clicked", Toast.LENGTH_SHORT).show();
-//                break;
-//            case R.id.button2:
-//                Toast.makeText(this, "Button 2 clicked", Toast.LENGTH_SHORT).show();
-//                break;
-//            case R.id.button3:
-//                Toast.makeText(this, "Button 3 clicked", Toast.LENGTH_SHORT).show();
-//                break;
-//            case R.id.button4:
-//                Toast.makeText(this, "Button 4 clicked", Toast.LENGTH_SHORT).show();
-//                break;
-//            case R.id.button5:
-//                Toast.makeText(this, "Button 5 clicked", Toast.LENGTH_SHORT).show();
 //                break;
         }
     }

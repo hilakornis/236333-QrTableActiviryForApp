@@ -20,11 +20,9 @@
             android:id="@+id/tableLayout2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="42dp"
             android:background="#ffffff"
             android:shrinkColumns="*"
             android:stretchColumns="*"
-            app:layout_constraintBottom_toTopOf="@+id/qrCardsString"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -34,7 +32,8 @@
             <TableRow
                 android:id="@+id/tableRow0"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:backgroundTint="#7C4747">
 
                 <Button
                     android:id="@+id/button00"
@@ -393,48 +392,20 @@
 
         </TableLayout>
 
-        <EditText
-            android:id="@+id/qrCardsString"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:ems="10"
-            android:hint="Here is the code"
-            android:inputType="textPersonName"
-            android:text="qrCardsString"
-            app:layout_constraintBottom_toTopOf="@+id/update_button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
-            tools:ignore="MissingConstraints" />
-
-        <Button
-            android:id="@+id/update_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="70dp"
-            android:layout_marginBottom="10dp"
-            android:backgroundTint="#FF5722"
-            android:text="update"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/done_button"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/qrCardsString" />
-
         <Button
             android:id="@+id/done_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="70dp"
-            android:layout_marginEnd="25dp"
+            android:layout_marginStart="162dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="162dp"
             android:backgroundTint="#FF9800"
             android:text="Done"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.37"
-            app:layout_constraintStart_toEndOf="@+id/update_button"
-            app:layout_constraintTop_toBottomOf="@+id/qrCardsString" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
+            app:layout_constraintVertical_bias="0.0" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
