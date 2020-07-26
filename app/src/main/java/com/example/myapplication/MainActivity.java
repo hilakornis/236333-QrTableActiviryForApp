@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             "NaN,NaN,NaN,NaN,NaN,NaN";
 
     private Button[][]  table_buttons;
-//    private Button update_button;
+
     private Button done_button;
 
     private ArrayList<QREnums> enums_in_table ;
@@ -455,12 +455,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        this.update_button = findViewById(R.id.update_button);
         this.done_button = findViewById(R.id.done_button);
         this.table_buttons = new Button[8][6];
         setIdForTableButtons();
 
-//        this.update_button.setOnClickListener(this);
         this.done_button.setOnClickListener(this);
         setListenersForTableButtons();
 
